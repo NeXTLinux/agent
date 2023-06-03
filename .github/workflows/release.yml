@@ -13,15 +13,6 @@ jobs:
       contents: write
     runs-on: ubuntu-20.04
     steps:
-      - uses: nextlinux/harden-runner@v2.4.0
-        with:
-          allowed-endpoints: api.github.com:443
-            github.com:443
-            goreleaser.com:443
-            objects.githubusercontent.com:443
-            proxy.golang.org:443
-            storage.googleapis.com:443
-            uploads.github.com:443
       - name: Checkout
         uses: actions/checkout@v2
       - name: Set up Go
