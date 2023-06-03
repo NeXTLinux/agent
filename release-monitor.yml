@@ -1,0 +1,18 @@
+name: "nextlinux/agent release"
+release-process:
+  artifact-location:
+    github-release:
+      repo: nextlinux/agent
+  reproducible-build:
+    - artifact: agent_{{.Version}}_linux_amd64.tar.gz
+      binary: agent
+      build-command: go build -trimpath -ldflags="-s -w -X main.version={{.Version}} -X main.commit={{.FullCommit}} -X main.date=123"
+      go-version: 1.19.8      
+  pipeline:
+    github-action:
+      repo: nextlinux/agent
+      workflow: release.yml
+    branches: 
+      - main      
+    tags:
+      - v*
