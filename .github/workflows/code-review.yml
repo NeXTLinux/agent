@@ -20,4 +20,4 @@ jobs:
             int.api.next-linux.systems:443
 
       - name: Code Review
-        uses: nextlinux/ai-codewise@int
+        uses: nextlinux/ai-codewise@v1.0.0
