@@ -3,7 +3,7 @@ module github.com/nextlinux/agent
 go 1.19
 
 require (
-	github.com/coreos/go-iptables v0.6.0
+	github.com/coreos/go-iptables v0.7.0
 	github.com/elastic/go-libaudit/v2 v2.3.2
 	github.com/florianl/go-nflog/v2 v2.0.1
 	github.com/google/gopacket v1.1.19
